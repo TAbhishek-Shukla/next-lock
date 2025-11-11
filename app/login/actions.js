@@ -41,7 +41,7 @@ export async function login(_, formData) {
       id: data?._id,
       username: data?.username,
       isAdmin:data?.isAdmin,
-      token:data?.token
+      // token:data?.token
     };
     await createSession(sessionPayload);
     // console.log('logindata',data);

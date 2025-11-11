@@ -22,10 +22,10 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Incorrect password' }, { status: 400 });
     }
 
-    const token = generateToken(user._id.toString());
+    // const token = generateToken(user._id.toString());
     const { _id, username,isAdmin } = user;
 
-    return NextResponse.json({ message: 'Login successfully', token, _id, username ,isAdmin});
+    return NextResponse.json({ message: 'Login successfully',  _id, username ,isAdmin});
   } catch (error) {
     console.error('Login error:', error);
     return NextResponse.json({ error: 'Login failed' }, { status: 500 });
